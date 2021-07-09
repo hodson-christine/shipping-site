@@ -4,6 +4,7 @@ var modal = document.getElementById("myModal");
 var span = document.getElementsByClassName("close")[0];
 var span1 = document.getElementsByClassName("close1")[0]; //wrongTrackNumModal
 var wrongTrackNumModal = document.getElementById("wrongTrackNumModal");
+let trackingNumber = document.querySelector(".trackingNumber");
 let trackingNumberArray = [
 	"co@rectD1@E#qr0.",
 	"ghfvAC2!2eyn02E",
@@ -12,9 +13,10 @@ let trackingNumberArray = [
 ];
 
 const displayTrackDetails = () => {
+	trackingNumber.innerHTML = `Tracking Number: ${trackInput.value}`;
 	trackingNumberArray.includes(trackInput.value.trim())
-		? (modal.style.display = "block")
-		: (wrongTrackNumModal.style.display = "block");
+			? (modal.style.display = "block")
+			: (wrongTrackNumModal.style.display = "block");
 
 	trackInput.value = "";
 };
