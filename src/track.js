@@ -36,4 +36,11 @@ window.onclick = function (event) {
 	}
 };
 
+trackInput.addEventListener("keyup", function (event) {
+	if (event.keyCode === 13) {
+		event.preventDefault();
+		trackButton.click();
+	}
+});
 trackButton.addEventListener("click", displayTrackDetails);
+
